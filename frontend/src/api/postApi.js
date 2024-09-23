@@ -1,21 +1,21 @@
 import axios from 'axios'
 
-const postApi = axios.create({
-    baseURL: 'http:localhost:8000/api/'
+const tourismApi = axios.create({
+    baseURL: 'http://localhost:8000/api/tourism/posts/'
 })
 
-export const getAllTourismPosts = () => postApi.get('/')
+export const getAllPosts = () => tourismApi.get('/')
 
-export const getTourismPost = (id) => postApi.get(`/${id}`)
+export const getPost = (id) => tourismApi.get(`/${id}`)
 
-export const createTourismPost = ({location, content}) => {
+export const createPost = ({location, content}) => {
     const date = new Date()
-    postApi.post('/',{location, date, content})
+    tourismApi.post('/',{location, date, content})
 }
 
-export const deleteTourismPost = (id) => postApi.delete(`/${id}`)
+export const deletePost = (id) => tourismApi.delete(`/${id}`)
 
-export const updateTourismPost = ({id, location, content}) => {
+export const updatePost = ({id, location, content}) => {
     const date = new Date()
-    postApi.put(`/${id}/`, {location, date, content})
+    tourismApi.put(`/${id}/`, {location, date, content})
 }
