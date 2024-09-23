@@ -1,0 +1,17 @@
+.Post {
+    border: 2px solid #000;
+    padding: 20px;
+}
+
+.Post-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ql-container.ql-snow {
+    border: none;
+}
+
+.ql-editor {
+    padding: 0;
+}
