@@ -14,13 +14,15 @@ export const TourismIndex = () => {
 
     return (
         <>
-        <Navigation />
-        <Link to={'new-post'}>Nuevo post</Link>
+            <Navigation />
         <main>
-            {posts.map(post => (
-                <Post key={post.id} post={post} />
-            ))}
+            <Link to={'new-post'} className="new-post-btn"><span className="material-symbols-outlined">add</span></Link>
+            <section>
+                {posts.map(post => (
+                    <Post key={post.id} post={post} />
+                ))}
 
+            </section>
         </main>
         </>
     )

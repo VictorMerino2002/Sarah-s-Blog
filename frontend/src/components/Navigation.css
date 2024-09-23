@@ -1,22 +1,58 @@
 .Navigation {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: var(--main-color-01);
+}
+
+.Navigation div{
     display: flex;
-    justify-content: center;
-    gap: 0px;
-    border: 1px solid #000;
-    border-radius: 4em;
-    width: max-content;
-    margin: auto;
-    margin-top: 50px;
+    flex-direction: column;
 }
 
-.Navigation a {
-    padding: 10px 50px;
+.Navigation .open-close-btn {
+    background: none;
+    border: none;
+    height: 50px;
+    padding: 0 20px;
+    color: var(--text-color-02);
+}
+
+.Navigation div a {
+    padding: 20px;
     text-decoration: none;
-    color: #000;
+    color: var(--text-color-02);
 }
 
-.Navigation a:hover {
-    background: #eee;
-    color: #49f;
-    border-color: #49f;
+.Navigation div a:hover {
+    background: var(--main-color-02);
 }
+
+.Navigation .open {
+    display: flex;
+}
+
+.Navigation .close {
+    display: none;
+}
+
+@media only screen and (min-width: 600px) {
+
+    .Navigation .open-close-btn {
+        display: none;
+    }
+
+    .Navigation div, .Navigation .close {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .Navigation div a {
+        display: flex;
+        align-items: center;
+        height: 50px;
+    }
+  }

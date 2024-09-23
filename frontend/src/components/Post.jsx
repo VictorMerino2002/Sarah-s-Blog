@@ -17,8 +17,8 @@ export const Post = ({post}) => {
                 </div>
 
                 <div className="Post-btns">
-                    <Link>edit</Link>
-                    <button>remove</button>
+                    <Link><span className="material-symbols-outlined">edit</span></Link>
+                    <button><span className="material-symbols-outlined">delete</span></button>
                 </div>
             </div>
             <Editor readOnly={true} editorContent={content}/>

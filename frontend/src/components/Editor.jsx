@@ -34,7 +34,7 @@ export const Editor = ({editorContent, setEditorContent,readOnly}) => {
 
 
   return (
-    <div>
+    <div className='Editor'>
       <ReactQuill 
         value={editorContent}
         onChange={handleEditorChange}
