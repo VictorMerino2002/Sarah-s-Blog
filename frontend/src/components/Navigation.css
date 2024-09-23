@@ -1,0 +1,17 @@
+.Navigation {
+    display: flex;
+    gap: 10px;
+}
+
+.Navigation a {
+    padding: 10px;
+    border: 1px solid #000;
+    text-decoration: none;
+    color: #000;
+}
+
+.Navigation a:hover {
+    background: #eee;
+    color: #49f;
+    border-color: #49f;
+}
