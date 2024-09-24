@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { Navigation } from "../components/Navigation"
-import { Post } from "../components/Post"
+import { PostsList } from "../components/PostsList"
 import { getAllPosts } from "../api/postApi"
 import { useEffect, useState } from "react"
 import './TourismIndex.css'
@@ -9,20 +9,17 @@ export const TourismIndex = () => {
     const [posts, setPosts] = useState([])
 
     useEffect(() => {
-        getAllPosts().then(data => setPosts(data.data))
+        getAllPosts().then(data => {
+            setPosts(data.data)
+        })
     },[])
 
     return (
         <>
             <Navigation />
-        <main>
+        <main className="posts-page">
             <Link to={'new-post'} className="new-post-btn"><span className="material-symbols-outlined">add</span></Link>
-            <section>
-                {posts.map(post => (
-                    <Post key={post.id} post={post} />
-                ))}
-
-            </section>
+            <PostsList posts={posts} />
         </main>
         </>
     )

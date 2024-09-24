@@ -4,4 +4,4 @@ from .models import Tourism
 class TourismSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tourism
-        fields = ('location', 'date', 'content')
+        fields = ('id', 'location', 'date', 'content')

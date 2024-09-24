@@ -1,6 +1,5 @@
-main {
+.posts-page {
     padding: 0 20px;
-    margin-top: 60px;
 }
 
 .new-post-btn {
@@ -14,20 +13,9 @@ main {
     margin-bottom: 10px;
 }
 
-section {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-auto-rows: 300px;
-    gap: 20px;
-}
+@media only screen and (min-width: 600px)  {
 
-.Post {
-    height: 100%;
-    padding-bottom: 60px;
-    overflow: hidden;
-}
-
-.Post .Editor {
-    height: 100%;
-    overflow: hidden;
+    .posts-page {
+        padding: 0 20%;
+    }
 }

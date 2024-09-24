@@ -1,13 +1,17 @@
 .Post {
-    border: 2px solid #000;
+    border: 1px solid #000;
+    padding: 20px;
+}
+
+.Post * {
+    cursor: pointer;
 }
 
 .Post-header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    background: #00000016;
-    padding: 5px 20px;
+    margin-bottom: 20px;
 }
 
 .Post-header div {
@@ -34,14 +38,19 @@
     color: #ff4444;
 }
 
-.Post .Editor {
-    padding: 20px;
-}
 
-.ql-container.ql-snow {
+.Post .ql-container.ql-snow {
     border: none;
 }
 
-.ql-editor {
+.Post .ql-editor {
     padding: 0;
+}
+
+.Post:hover * {
+    color: #4460ff !important;
+}
+
+.Post:hover {
+    border-color: #4451ff;
 }

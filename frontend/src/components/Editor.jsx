@@ -17,7 +17,6 @@ export const Editor = ({editorContent, setEditorContent,readOnly}) => {
       [{ 'list': 'ordered'}, { 'list': 'bullet' }, { 'list': 'check' }],
       [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent
   
-      [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
       [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
   
       [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
@@ -39,7 +38,6 @@ export const Editor = ({editorContent, setEditorContent,readOnly}) => {
         value={editorContent}
         onChange={handleEditorChange}
         theme='snow'
-        placeholder='Escribe algo aquí'
         readOnly={readOnly}
         modules={modules}
       />

@@ -10,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/tourism/new-post" element={<PostEdit />} />
         <Route path="/tourism" element={<TourismIndex />} />
+        <Route path="/tourism/:id" element={<PostEdit />} />
       </Routes>
     </BrowserRouter>
   )
