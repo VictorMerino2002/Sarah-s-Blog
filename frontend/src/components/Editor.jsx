@@ -5,11 +5,35 @@ import ResizeModule from "@majintd/quill-image-resize";
 
 Quill.register("modules/resize", ResizeModule);
 
+const Embed = Quill.import('blots/block/embed');
+
+class ImageBlot extends Embed {
+  static create(value) {
+    let node = super.create();
+    node.setAttribute('src', value.url || value);
+    if (value.style) {
+      node.setAttribute('style', value.style);
+    }
+    return node;
+  }
+
+  static value(node) {
+    return {
+      url: node.getAttribute('src'),
+      style: node.getAttribute('style')
+    };
+  }
+}
+
+ImageBlot.blotName = 'image';
+ImageBlot.tagName = 'img';
+
+Quill.register(ImageBlot);
+
 export const Editor = ({editorContent, setEditorContent,readOnly}) => {
 
     const handleEditorChange = (content) => {
         if (readOnly) return
-        console.log(content)
         setEditorContent(content)
     }
 
@@ -39,7 +63,9 @@ export const Editor = ({editorContent, setEditorContent,readOnly}) => {
       [{ 'align': [] }]
       ],
       resize: {
-        locale: {},
+        locale: {
+          center : {}
+        },
       }
   }
 
