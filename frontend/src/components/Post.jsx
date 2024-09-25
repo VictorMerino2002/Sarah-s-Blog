@@ -11,7 +11,7 @@ export const Post = ({post}) => {
     const navigate = useNavigate()
 
     const handleClick = () => {
-        navigate(id.toString())
+        navigate(`/tourism/${id}`)
     }
 
     return (

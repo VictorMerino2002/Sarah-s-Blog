@@ -1,75 +1,61 @@
 .Button {
     padding: 10px 20px;
-    border-radius: .4em;
-    border: 1px solid #333;
+    border: 3px solid #333;
     font-weight: bold;
     min-width: 100px;
     width: max-content;
-}
+    background: none;
 
-.Button.white {
-    background: var(--white-01);
-    color: var(--text-color-01);
-    border-color: #333;
-
-    transition: all .3s linear;
+    transition: border-radius .5s;
     &:hover {
-        color: var(--text-color-02);
-        background: var(--white-02);
-        border-color: #ccc;
+        border-radius: 4em;
     }
 }
 
 .Button.black {
+    color: var(--white-01);
     background: var(--black-01);
-    color: var(--text-color-02);
-    border-color: #ddd;
+    border-color: var(--black-01);
 
-    transition: all .3s linear;
     &:hover {
-        color: var(--text-color-01);
-        background: var(--black-02);
-        border-color: #333;
+        color: var(--black-01);
+        background: var(--white-01);
     }
 }
 
-.Button.red {
-    background: var(--red-01);
-    color: var(--text-color-02);
+.Button.white {
+    color: var(--black-01);
+    background: var(--white-01);
+    border-color: var(--white-01);
 
-    transition: all .3s linear;
     &:hover {
-        background: var(--red-02);
+        color: var(--white-01);
+        background: var(--black-01);
     }
 }
 
-.Button.blue {
-    background: var(--blue-01);
-    color: var(--text-color-02);
+.Button.white-border {
+    border-color: var(--white-01);
+    color: var(--white-01);
 
-    transition: all .3s linear;
     &:hover {
-        background: var(--blue-02);
+        background: var(--white-01);
+        color: var(--black-01)
     }
 }
 
-.Button.green {
-    background: var(--green-01);
-    color: var(--text-color-01);
+.Button.black-border {
+    border-color: var(--black-01);
+    color: var(--black-01);
 
-    transition: all .3s linear;
     &:hover {
-        color: var(--text-color-02);
-        background: var(--green-02);
+        background: var(--black-01);
+        color: var(--white-01);
     }
 }
 
-.Button.yellow {
-    background: var(--yellow-01);
-    color: var(--text-color-01);
-
-    transition: all .3s linear;
-    &:hover {
-        background: var(--yellow-02);
-    }
+.Button.negative:hover {
+    border-color: var(--red-01);
+    color: var(--red-01);
+    background: var(--red-02);
 }

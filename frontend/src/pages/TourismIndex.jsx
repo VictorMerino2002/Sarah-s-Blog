@@ -19,9 +19,9 @@ export const TourismIndex = () => {
 
     return (
         <>
-            <Navigation activeTab={"tab3"} />
+            <Navigation activeTab={"tab4"} />
         <main className="posts-page">
-            <Button variant={"black"} handleClick={() => navigate("new-post")}>New post</Button>
+            <Button variant={"black-border"} handleClick={() => navigate("new-post")}>New post</Button>
             <PostsList posts={posts} />
         </main>
         </>

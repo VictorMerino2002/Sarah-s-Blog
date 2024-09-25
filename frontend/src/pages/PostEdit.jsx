@@ -43,13 +43,13 @@ export const PostEdit = () => {
 
     return (
         <main className='editor-page'>
-            <Navigation activeTab={"tab3"}/>
+            <Navigation activeTab={"tab4"}/>
             <header>
                 <input type="text" defaultValue={location} onChange={(e) => setLocation(e.target.value)} placeholder="Introduce la locaciación"/>
 
                 <div>
                     <Button handleClick={handleClick} variant={"black"}>Save</Button>
-                    {params.id && <Button handleClick={handleDelete} variant={"red"}>Delete</Button>}
+                    {params.id && <Button handleClick={handleDelete} variant={"negative black"}>Delete</Button>}
                 </div>
             </header>
             <Editor editorContent={editorContent} setEditorContent={setEditorContent}></Editor>
