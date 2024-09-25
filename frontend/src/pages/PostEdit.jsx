@@ -3,6 +3,7 @@ import { Editor } from "../components/Editor"
 import { Navigation } from '../components/Navigation'
 import { createPost, deletePost, getPost, updatePost } from '../api/postApi'
 import { useNavigate, useParams } from 'react-router-dom'
+import { Button } from "../components/Button"
 import { capFirst } from '../logic'
 import "./PostEdit.css"
 
@@ -42,13 +43,13 @@ export const PostEdit = () => {
 
     return (
         <main className='editor-page'>
-            <Navigation />
+            <Navigation activeTab={"tab3"}/>
             <header>
                 <input type="text" defaultValue={location} onChange={(e) => setLocation(e.target.value)} placeholder="Introduce la locaciación"/>
 
                 <div>
-                    <button onClick={handleClick}><span className="material-symbols-outlined">save</span></button>
-                    {params.id && <button onClick={handleDelete}><span className="material-symbols-outlined">delete</span></button>}
+                    <Button handleClick={handleClick} variant={"black"}>Save</Button>
+                    {params.id && <Button handleClick={handleDelete} variant={"red"}>Delete</Button>}
                 </div>
             </header>
             <Editor editorContent={editorContent} setEditorContent={setEditorContent}></Editor>

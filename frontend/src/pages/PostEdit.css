@@ -4,9 +4,11 @@
 
 .editor-page > header {
     display: flex;
+    flex-wrap: wrap;
     gap: 5px;
     width: 100%;
     padding: 0 10px;
+    padding-bottom: 10px;
 }
 
 .editor-page > header > input {
@@ -20,6 +22,7 @@
 
 .editor-page > header > div {
     display: flex;
+    gap: 10px;
 }
 
 .ql-toolbar.ql-snow {

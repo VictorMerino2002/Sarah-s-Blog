@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { Navigation } from "../components/Navigation"
 import { PostsList } from "../components/PostsList"
 import { getAllPosts } from "../api/postApi"
 import { useEffect, useState } from "react"
+import { Button } from "../components/Button"
 import './TourismIndex.css'
 
 export const TourismIndex = () => {
@@ -14,11 +15,13 @@ export const TourismIndex = () => {
         })
     },[])
 
+    const navigate = useNavigate()
+
     return (
         <>
-            <Navigation />
+            <Navigation activeTab={"tab3"} />
         <main className="posts-page">
-            <Link to={'new-post'} className="new-post-btn"><span className="material-symbols-outlined">add</span></Link>
+            <Button variant={"black"} handleClick={() => navigate("new-post")}>New post</Button>
             <PostsList posts={posts} />
         </main>
         </>

@@ -21,24 +21,6 @@
     gap: 5px;
 }
 
-.Post-btns a{
-    color: #000;
-}
-
-.Post-btns button {
-    background: none;
-    border: none;
-}
-
-.Post-btns a:hover {
-    color: #f94;
-}
-
-.Post-btns button:hover {
-    color: #ff4444;
-}
-
-
 .Post .ql-container.ql-snow {
     border: none;
 }
@@ -48,9 +30,9 @@
 }
 
 .Post:hover * {
-    color: #4460ff !important;
+    color: #fb1 !important;
 }
 
 .Post:hover {
-    border-color: #4451ff;
+    border-color: #fb1;
 }

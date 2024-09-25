@@ -1,0 +1,75 @@
+.Button {
+    padding: 10px 20px;
+    border-radius: .4em;
+    border: 1px solid #333;
+    font-weight: bold;
+    min-width: 100px;
+    width: max-content;
+}
+
+.Button.white {
+    background: var(--white-01);
+    color: var(--text-color-01);
+    border-color: #333;
+
+    transition: all .3s linear;
+    &:hover {
+        color: var(--text-color-02);
+        background: var(--white-02);
+        border-color: #ccc;
+    }
+}
+
+.Button.black {
+    background: var(--black-01);
+    color: var(--text-color-02);
+    border-color: #ddd;
+
+    transition: all .3s linear;
+    &:hover {
+        color: var(--text-color-01);
+        background: var(--black-02);
+        border-color: #333;
+    }
+}
+
+.Button.red {
+    background: var(--red-01);
+    color: var(--text-color-02);
+
+    transition: all .3s linear;
+    &:hover {
+        background: var(--red-02);
+    }
+}
+
+.Button.blue {
+    background: var(--blue-01);
+    color: var(--text-color-02);
+
+    transition: all .3s linear;
+    &:hover {
+        background: var(--blue-02);
+    }
+}
+
+.Button.green {
+    background: var(--green-01);
+    color: var(--text-color-01);
+
+    transition: all .3s linear;
+    &:hover {
+        color: var(--text-color-02);
+        background: var(--green-02);
+    }
+}
+
+.Button.yellow {
+    background: var(--yellow-01);
+    color: var(--text-color-01);
+
+    transition: all .3s linear;
+    &:hover {
+        background: var(--yellow-02);
+    }
+}
