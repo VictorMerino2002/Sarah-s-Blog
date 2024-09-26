@@ -1,18 +1,11 @@
 /* eslint-disable react/prop-types */
 import { Editor } from "./Editor"
 import { capFirst } from "../logic"
-import { useNavigate } from "react-router-dom"
 import './style/Post.css'
 
-export const Post = ({post}) => {
+export const Post = ({post, handleClick}) => {
 
-    const {id, location, date, content} = post
-
-    const navigate = useNavigate()
-
-    const handleClick = () => {
-        navigate(`/tourism/${id}`)
-    }
+    const {location, date, content} = post
 
     return (
         <div className="Post" onClick={handleClick}>

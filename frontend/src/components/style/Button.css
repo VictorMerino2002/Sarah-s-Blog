@@ -5,6 +5,7 @@
     min-width: 100px;
     width: max-content;
     background: none;
+    cursor: pointer;
 
     transition: border-radius .5s;
     &:hover {

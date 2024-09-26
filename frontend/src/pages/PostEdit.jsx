@@ -5,7 +5,7 @@ import { createPost, deletePost, getPost, updatePost } from '../api/postApi'
 import { useNavigate, useParams } from 'react-router-dom'
 import { Button } from "../components/Button"
 import { capFirst } from '../logic'
-import "./PostEdit.css"
+import "./style/PostEdit.css"
 
 export const PostEdit = () => {
 

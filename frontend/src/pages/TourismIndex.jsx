@@ -4,7 +4,7 @@ import { PostsList } from "../components/PostsList"
 import { getAllPosts } from "../api/postApi"
 import { useEffect, useState } from "react"
 import { Button } from "../components/Button"
-import './TourismIndex.css'
+import './style/TourismIndex.css'
 
 export const TourismIndex = () => {
     const [posts, setPosts] = useState([])
@@ -22,7 +22,7 @@ export const TourismIndex = () => {
             <Navigation activeTab={"tab4"} />
         <main className="posts-page">
             <Button variant={"black-border"} handleClick={() => navigate("new-post")}>New post</Button>
-            <PostsList posts={posts} />
+            <PostsList posts={posts} handleClick={(post) => navigate(`/admin/tourism/${post.id}`) }/>
         </main>
         </>
     )

@@ -11,8 +11,8 @@ export const Home = () => {
         <>
         <Navigation activeTab={"tab1"} />
         <section>
-            <PostsList />
-            <Button handleClick={() => navigate("/tourism")}>Ver más</Button>
+            <PostsList handleClick={(post) => navigate(`/admin/tourism/${post.id}`)}/>
+            <Button variant={"black"} handleClick={() => navigate("/admin/tourism")}>Ver más</Button>
         </section>
         </>
     )

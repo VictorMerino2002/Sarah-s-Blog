@@ -16,7 +16,7 @@ export const Navigation = ({activeTab}) => {
             <button className="open-close-btn" onClick={handleClick}><span className="material-symbols-outlined">menu</span></button>
             <div className={openNav ? "open" : "close"}>
                 <div className={ activeTab == "tab1" ? "active-tab tab" : "tab"}>
-                    <Link to={"/"}>Inicio</Link>
+                    <Link to={"/admin"}>Inicio</Link>
                     <span></span>
                 </div>
                 <div className={ activeTab == "tab2" ? "active-tab tab" : "tab"}>
@@ -28,7 +28,7 @@ export const Navigation = ({activeTab}) => {
                     <span></span>
                 </div>
                 <div className={ activeTab == "tab4" ? "active-tab tab" : "tab"}>
-                    <Link to={"/tourism"}>Turismo</Link>
+                    <Link to={"/admin/tourism"}>Turismo</Link>
                     <span></span>
                 </div>
                 <div className={ activeTab == "tab5" ? "active-tab tab" : "tab"}>
