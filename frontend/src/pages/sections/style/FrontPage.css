@@ -1,0 +1,116 @@
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+    height: 100dvh;
+    background-image: url("../../../assets/portada.webp");
+    background-position: center;
+    background-size: cover;
+    padding: 50px;
+}
+
+#home h1 {
+    font-family: 'TAN - PEARL';
+    font-weight: bold;
+    font-size: 70px;
+    color: var(--main-01);
+}
+
+#home div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+}
+
+#home div p {
+    text-align: justify;
+    color: var(--white-01);
+}
+
+#home .front-page {
+    display: none;
+}
+
+.daisy {
+    display: none;
+}
+
+@media only screen and (min-width: 900px) {
+    #home {
+        display: grid;
+        grid-template-columns: 1fr 1.1fr 1fr;
+        grid-template-rows: 100%;
+        background: none;
+        gap: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    #home > div {
+        height: 100%;
+        width: 100%;
+        background: var(--red-04);
+    }
+
+    #home .section-1, #home .section-3 {
+        display: grid;
+        place-content: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    #home .section-1 h1 {
+        position: absolute;
+        left: 10%;
+        top: 220px;
+        width: 500px;
+        font-size: 100px;
+        z-index: 3;
+    }
+
+    #home .section-3 {
+        display: flex;
+        align-items: center;
+        width: 100%
+    }
+
+    #home .section-3 div {
+        width: 300px;
+    }
+
+    #home .section-3 p {
+        font-family: "Schoolbell", cursive;
+        color: var(--black-01);
+    }
+    
+    #home .front-page {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    #home .daisy {
+        display: block;
+        position: absolute;
+        top: 100px;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    #home .daisy-container {
+        display: block;
+        height: 500px;
+        width: 300px;
+        position: absolute;
+        bottom: 0;
+        left: -100px;
+        overflow: hidden;
+    }
+}

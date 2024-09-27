@@ -4,12 +4,23 @@
   --white-01 : #fff;
   --red-01 : #f44;
   --red-02 : #611c1c;
+  --red-03 : #fc6666;
+  --red-04 : #b88a8a;
   --blue-01 : #49f;
   --blue-02 : #3b82da;
   --green-01 : #4f9;
   --green-02 : #2cc470;
   --yellow-01 : #fcff44;
   --yellow-02 : #d7da34;
+}
+
+@font-face {
+  font-family: 'TAN - PEARL';
+  src: url('./assets/fonts/TAN-PEARL-Regular.woff2') format('woff2'),
+      url('./assets/fonts/TAN-PEARL-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 * {

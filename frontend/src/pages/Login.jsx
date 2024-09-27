@@ -11,12 +11,21 @@ export const Login = () => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [loading, setLoading] = useState(false)
-    const [loginError, setLoginError] = useState(false)
+    const [errorMsg, setErrorMsg] = useState('')
     const navigate = useNavigate()
 
     const handleSubmit = async (event) => {
-
         event.preventDefault()
+
+        if (!username) {
+            setErrorMsg("Introduce el nombre de usuario")
+            return
+        }
+
+        if (!password) {
+            setErrorMsg("Introduce la contraseña")
+            return
+        }
 
         setLoading(true)
 
@@ -27,8 +36,7 @@ export const Login = () => {
             navigate("/admin/")
             
         } catch (error) {
-            setLoginError(true)
-            console.error('Error al iniciar sesión', error)
+            setErrorMsg("Usuario o contraseña incorrecta")
         }
 
         setLoading(false)
@@ -39,10 +47,10 @@ export const Login = () => {
                 <h1>Iniciar Sesión</h1>
                     <input value={username} onChange={ e => setUsername(e.target.value)} type="text" placeholder="Username" />
                     <input value={password} onChange={ e => setPassword(e.target.value)} type="password" placeholder="Password"/>
-                    {loginError && <span>Usuario o contraseña incorrecta</span>}
+                    {errorMsg && <span className="error-msg">{errorMsg}</span>}
                     {loading 
                     ? <Loader />
-                    : <Button type={"submit"} variant={"black loading"}>Iniciar Sesión</Button>
+                    : <Button type={"submit"} variant={"black"}>Iniciar Sesión</Button>
                     }
                     
             </form>
