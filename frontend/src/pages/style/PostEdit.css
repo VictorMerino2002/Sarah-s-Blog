@@ -47,6 +47,10 @@
     background: #eee;
 }
 
+.Loader-container {
+    padding: 0 32.5px;
+}
+
 @media only screen and (min-width: 900px) {
     .editor-page .ql-container{
         display: flex;
