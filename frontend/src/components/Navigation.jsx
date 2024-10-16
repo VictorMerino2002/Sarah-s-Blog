@@ -16,27 +16,27 @@ export const Navigation = ({activeTab}) => {
             <button className="open-close-btn" onClick={handleClick}><span className="material-symbols-outlined">menu</span></button>
             <div className={openNav ? "open" : "close"}>
                 <div className={ activeTab == "tab1" ? "active-tab tab" : "tab"}>
-                    <Link to={"/admin"}>Inicio</Link>
+                    <Link to={"/admin"}>Home</Link>
                     <span></span>
                 </div>
                 <div className={ activeTab == "tab2" ? "active-tab tab" : "tab"}>
-                    <Link>Sobre mi</Link>
+                    <Link>About Me</Link>
                     <span></span>
                 </div>
                 <div className={ activeTab == "tab3" ? "active-tab tab" : "tab"}>
-                    <Link>Mi libro</Link>
+                    <Link>My Book</Link>
                     <span></span>
                 </div>
                 <div className={ activeTab == "tab4" ? "active-tab tab" : "tab"}>
-                    <Link to={"/admin/tourism"}>Turismo</Link>
+                    <Link to={"/admin/tourism"}>Turism</Link>
                     <span></span>
                 </div>
                 <div className={ activeTab == "tab5" ? "active-tab tab" : "tab"}>
-                    <Link>Trabajo y vida</Link>
+                    <Link>Work & Life</Link>
                     <span></span>
                 </div>
                 <div className={ activeTab == "tab6" ? "active-tab tab" : "tab"}>
-                    <Link>Estudio</Link>
+                    <Link to={"/admin/magazines"}>Studio</Link>
                     <span></span>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const tourismApi = axios.create({
-    baseURL: 'http://localhost:8000/api/tourism/posts/'
+    baseURL: 'http://localhost:8000/api/tourism-posts/'
 })
 
 tourismApi.interceptors.request.use(

@@ -5,10 +5,11 @@ from blog import views
 from rest_framework.authtoken.views import obtain_auth_token
 
 router = routers.DefaultRouter()
-router.register(r'posts', views.TourismView, 'blog')
+router.register(r'tourism-posts', views.TourismView, 'blog')
+router.register(r'magazines', views.MagazineView, 'magazines')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/tourism/', include(router.urls)),
+    path('api/', include(router.urls)),
     path('api/token/', obtain_auth_token),
 ]

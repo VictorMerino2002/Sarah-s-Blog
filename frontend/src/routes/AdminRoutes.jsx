@@ -4,6 +4,7 @@ import { Home } from "../pages/Home"
 import { PostEdit } from "../pages/PostEdit"
 import { TourismIndex } from "../pages/TourismIndex"
 import { PrivateRoute } from "./PrivateRoute"
+import { MagazineIndex } from "../pages/MagazineIndex"
 
 export const AdminRoutes = () => {
     return (
@@ -13,6 +14,7 @@ export const AdminRoutes = () => {
             <Route path="/admin/tourism/new-post" element={<PrivateRoute element={<PostEdit />} />} />
             <Route path="/admin/tourism" element={<PrivateRoute element={<TourismIndex />} />} />
             <Route path="/admin/tourism/:id" element={<PrivateRoute element={<PostEdit />} />} />
+            <Route path="/admin/magazines" element={<PrivateRoute element={<MagazineIndex />} />} />
         </Routes>
     )
 }

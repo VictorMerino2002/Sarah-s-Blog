@@ -13,14 +13,6 @@
     padding: 15px;
 }
 
-.Login .error-msg {
-    width: 100%;
-    text-align: center;
-    background: var(--red-03);
-    padding: 10px 20px;
-    color: var(--white-01);
-}
-
 @media only screen and (min-width: 600px) {
     .Login {
         width: 400px;
