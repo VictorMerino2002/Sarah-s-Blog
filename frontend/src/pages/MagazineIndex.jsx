@@ -1,8 +1,8 @@
 import { Button } from "../components/Button"
 import { Navigation } from "../components/Navigation"
 import { useEffect, useState } from "react"
-import { createMagazine, getMagazine } from "../api/magazineApi"
-import { PDF } from "../components/PDF"
+import { createMagazine, getAllMagazine } from "../api/magazineApi"
+import { PDFThumbnail } from "../components/PDFThumbnail"
 import "./style/MagazineIndex.css"
 
 export const MagazineIndex = () => {
@@ -14,13 +14,10 @@ export const MagazineIndex = () => {
     const [titleError, setTitleError] = useState(false)
     const [fileError, setFileError] = useState(false)
 
-    const [magazine, setMagazine] = useState(null)
+    const [magazines, setMagazines] = useState([])
 
     useEffect(() => {
-        getMagazine(2).then(data => {
-            console.log(data.data)
-            setMagazine(data.data)
-        })
+        getAllMagazine().then(data => setMagazines(data.data))
     },[])
 
     const handleSubmit = async (e) => {
@@ -56,7 +53,13 @@ export const MagazineIndex = () => {
                     <Button variant={"black-border"} type={"submit"}>Upload</Button>
                 </form>
             )}
-            {magazine && <PDF title={magazine.title} date={magazine.date} base64={magazine.content}/>}
+
+            <section>
+                <h2>Magazines</h2>
+                {magazines.map(magazine => (
+                    <PDFThumbnail title={magazine.title} date={magazine.date} base64={magazine.content} />
+                ))}
+            </section>
         </main>
         </>
     )
