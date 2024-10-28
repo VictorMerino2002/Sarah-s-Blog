@@ -54,8 +54,7 @@ export const MagazineIndex = () => {
                 </form>
             )}
 
-            <section>
-                <h2>Magazines</h2>
+            <section className="magazine-list">
                 {magazines.map(magazine => (
                     <PDFThumbnail title={magazine.title} date={magazine.date} base64={magazine.content} />
                 ))}

@@ -1,4 +1,9 @@
 .PDFThumbnail {
-    border: 3px solid;
-    width: max-content;
+    height: max-content;
+    border: 3px solid #000;
+    border-radius: .4em;
+
+    p {
+        padding: 0 10px;
+    }
 }

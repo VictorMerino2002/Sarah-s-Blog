@@ -21,6 +21,13 @@
     }
 }
 
+.Magazines-page .magazine-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
 @media screen and (min-width: 900px) {
     .Magazines-page .form-modal {
         width: 400px;
