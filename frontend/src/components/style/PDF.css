@@ -1,0 +1,23 @@
+.PDF {
+    width: 100%;
+    
+    .rpv-core__inner-page {
+        display: flex;
+        justify-content: center;
+    }
+    
+    canvas {
+        border: 1px solid;
+        border-bottom: 0;
+    }
+
+    .rpv-core__text-layer {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .PDF{
+        width: 750px;
+    }
+}

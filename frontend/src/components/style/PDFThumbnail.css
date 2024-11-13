@@ -1,7 +1,17 @@
 .PDFThumbnail {
-    height: max-content;
-    border: 3px solid #000;
-    border-radius: .4em;
+    aspect-ratio: 1;
+    cursor: pointer;
+
+    .rpv-core__viewer {
+        border-radius: .5em;
+        overflow: hidden;
+        border: 2px solid #000;
+
+    }
+    
+    &:hover .rpv-core__viewer {
+        border-color: #49f;
+    }
 
     p {
         padding: 0 10px;

@@ -4,8 +4,9 @@ import { Worker, Viewer } from '@react-pdf-viewer/core'
 import { thumbnailPlugin } from "@react-pdf-viewer/thumbnail"
 import { pageThumbnailPlugin } from "./plugins/thumbnail"
 import "./style/PDFThumbnail.css"
+import { useNavigate } from "react-router-dom"
 
-export const PDFThumbnail = ({ title, date, base64 }) => {
+export const PDFThumbnail = ({ id, title, date, base64 }) => {
   const [pdfData, setPdfData] = useState(null)
 
   useEffect(() => {
@@ -26,8 +27,10 @@ export const PDFThumbnail = ({ title, date, base64 }) => {
 
   const pageThumbnailPluginInstance = pageThumbnailPlugin(<Cover width={250} getPageIndex={() => 0} />)
 
+  const navigate = useNavigate()
+
   return (
-    <div className="PDFThumbnail">
+    <div className="PDFThumbnail" onClick={() =>navigate("/magazines/"+ id)}>
       {pdfData ? (
         <Worker workerUrl={`https://unpkg.com/pdfjs-dist@3.0.279/build/pdf.worker.min.js`}>
           <Viewer 

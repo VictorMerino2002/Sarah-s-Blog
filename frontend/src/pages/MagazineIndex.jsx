@@ -2,7 +2,7 @@ import { Button } from "../components/Button"
 import { Navigation } from "../components/Navigation"
 import { useEffect, useState } from "react"
 import { createMagazine, getAllMagazine } from "../api/magazineApi"
-import { PDFThumbnail } from "../components/PDFThumbnail"
+import { MagazineList } from "../components/MagazineList"
 import "./style/MagazineIndex.css"
 
 export const MagazineIndex = () => {
@@ -55,9 +55,7 @@ export const MagazineIndex = () => {
             )}
 
             <section className="magazine-list">
-                {magazines.map(magazine => (
-                    <PDFThumbnail title={magazine.title} date={magazine.date} base64={magazine.content} />
-                ))}
+                <MagazineList magazines={magazines} editor={true}/>
             </section>
         </main>
         </>
