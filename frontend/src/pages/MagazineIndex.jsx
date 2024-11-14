@@ -1,6 +1,6 @@
 import { Button } from "../components/Button"
 import { Navigation } from "../components/Navigation"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { createMagazine, getAllMagazine } from "../api/magazineApi"
 import { MagazineList } from "../components/MagazineList"
 import "./style/MagazineIndex.css"
@@ -15,6 +15,7 @@ export const MagazineIndex = () => {
     const [fileError, setFileError] = useState(false)
 
     const [magazines, setMagazines] = useState([])
+    const inputFile = useRef()
 
     useEffect(() => {
         getAllMagazine().then(data => setMagazines(data.data))
@@ -28,13 +29,28 @@ export const MagazineIndex = () => {
 
         if (title && file) {
             const res = await createMagazine({title, content:file})
-            console.log(res)
+            
+            setMagazines(prevMagazines => [...prevMagazines, res.data])
+
+            setTitle("")
+            setFile(null)
+            inputFile.current.value = ""
+            setMagazineModal(false)
         }
     }
 
     const handleFileChange = (e) => {
         if (!e.target || !e.target.files) return
-        setFile(e.target.files[0])
+        const selectedFile = e.target.files[0]
+
+        if (selectedFile.type !== "application/pdf") {
+            setFileError(true)
+            setFile(null)
+            inputFile.current.value = ""
+        } else {
+            setFileError(false)
+            setFile(selectedFile)
+        }
     }
 
     return (
@@ -48,8 +64,8 @@ export const MagazineIndex = () => {
                     <h2>Upload magazine</h2>
                     <input type="text" placeholder="Title" onChange={(e) => setTitle(e.target.value)}/>
                     {titleError && <span className="error-msg">Enter a title</span>}
-                    <input type="file" onChange={handleFileChange} multiple/>
-                    {fileError && <span className="error-msg">Enter a file</span>}
+                    <input type="file" ref={inputFile} onChange={handleFileChange} accept=".pdf"/>
+                    {fileError && <span className="error-msg">Enter a valid file</span>}
                     <Button variant={"black-border"} type={"submit"}>Upload</Button>
                 </form>
             )}
