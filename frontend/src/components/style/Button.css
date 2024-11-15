@@ -1,7 +1,6 @@
 .Button {
     padding: 10px 20px;
-    border: 3px solid #333;
-    font-weight: bold;
+    border: none;
     min-width: 100px;
     width: max-content;
     background: none;
@@ -13,50 +12,10 @@
     }
 }
 
-.Button.black {
-    color: var(--white-01);
-    background: var(--black-01);
-    border-color: var(--black-01);
+.Button.main {
+    background: var(--main-04);
 
-    &:hover {
-        color: var(--black-01);
-        background: var(--white-01);
+    &:active {
+        background: var(--main-05);
     }
-}
-
-.Button.white {
-    color: var(--black-01);
-    background: var(--white-01);
-    border-color: var(--white-01);
-
-    &:hover {
-        color: var(--white-01);
-        background: var(--black-01);
-    }
-}
-
-.Button.white-border {
-    border-color: var(--white-01);
-    color: var(--white-01);
-
-    &:hover {
-        background: var(--white-01);
-        color: var(--black-01)
-    }
-}
-
-.Button.black-border {
-    border-color: var(--black-01);
-    color: var(--black-01);
-
-    &:hover {
-        background: var(--black-01);
-        color: var(--white-01);
-    }
-}
-
-.Button.negative:hover {
-    border-color: var(--red-01);
-    color: var(--red-01);
-    background: var(--red-02);
 }

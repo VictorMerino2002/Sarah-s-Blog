@@ -1,5 +1,4 @@
 :root {
-  --main-01 : #fb1;
   --black-01 : #000;
   --white-01 : #fff;
   --red-01 : #f44;
@@ -12,12 +11,18 @@
   --green-02 : #2cc470;
   --yellow-01 : #fcff44;
   --yellow-02 : #d7da34;
+
+  --main-01: #fff8f1;
+  --main-02: #dfd6bf;
+  --main-03: #a2b542;
+  --main-04: #cbd17d;
+  --main-05: #8e9257;
 }
 
 @font-face {
   font-family: 'TAN - PEARL';
-  src: url('./assets/fonts/TAN-PEARL-Regular.woff2') format('woff2'),
-      url('./assets/fonts/TAN-PEARL-Regular.woff') format('woff');
+  src: url('./assets/fonts/TAN-PEARL/TAN-PEARL-Regular.woff2') format('woff2'),
+      url('./assets/fonts/TAN-PEARL/TAN-PEARL-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -25,8 +30,16 @@
 
 @font-face {
   font-family: 'Sinera';
-  src: url('./assets/fonts/Sinera.woff2') format('woff2'),
-      url('./assets/fonts/Sinera.woff') format('woff');
+  src: url('./assets/fonts/Sinera/Sinera.woff2') format('woff2'),
+      url('./assets/fonts/Sinera/Sinera.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Edwardian';
+  src: url(./assets/fonts/Edwardian/edwardianscriptitc.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -36,7 +49,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .error-msg {

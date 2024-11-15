@@ -1,28 +1,37 @@
-import portada from "../../assets/portada.webp"
-import daisy from "../../assets/daisy.webp"
 import { Button } from "../../components/Button"
 import "./style/FrontPage.css"
+import plant from "../../assets/planta.webp"
+import disc from "../../assets/disco.webp"
+import flower from "../../assets/flor.webp"
+import sarah from "../../assets/portada.webp"
+import dog from "../../assets/perro.webp"
+import pinterest from "../../assets/pinterest.png"
+import coffee from "../../assets/cafe.png"
 
 export const FrontPage = () => {
     return (
         <section id="home">
-            <div className="section-1">
-                <h1>Sarah Román</h1>
-                <div className="daisy-container">
-                    <img className="daisy" src={daisy} alt="Margarita" />
-                </div>
+            <img src={plant} alt="planta" className="plant" />
+
+            <h1>
+                <span>A Creative</span>
+                Sarah
+                <span>Thoughhul mind</span>
+                Román
+            </h1>
+            <div className="img-container">
+                <img src={sarah} alt="sarah" className="sarah"/>
+                <img src={dog} alt="dog" className="dog"/>
+                <img src={pinterest} alt="pinterest" className="pinterest"/>
+                <img src={coffee} alt="cafe" className="coffee"/>
             </div>
 
-            <div className="section-2">
-                <img className="front-page" src={portada} alt="Portada Sarah Román" />
-            </div>
+            <p>Welcome to my blog! I’m Sarah, a 20-year-old diving into everything life has to offer—music, books, travels, studies, work and the ups and downs along the way. Here, I’ll share my personal experiences and insights, hoping to connect with those on similar paths or just curious about a fresh perspective. Whether you’re here for inspiration, advice, or just a relatable read, I’m excited to have you on this journey with me. Let’s grow and learn together!</p>
 
-            <div className="section-3">
-                <div>
-                    <p>Comfort and style come together in our collection. Find clothes that not only make you look good, but also feel good</p>
-                    <Button variant={"black"}>BUY NOW</Button>
-                </div>
-            </div>
+            <img src={disc} alt="disco vinillo" className="disc" />
+            <span>.</span>
+            <Button variant={"main"}>Subscribe</Button>
+            <img src={flower} alt="flor rosa" className="flower"/>
         </section>
     )
 }
