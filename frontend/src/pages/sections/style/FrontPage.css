@@ -18,7 +18,7 @@
 #home h1 {
     font-family: 'Sinera';
     font-weight: normal;
-    font-size: 100px;
+    font-size: 55px;
     color: var(--white-01);
     z-index: 2;
     width: max-content;
@@ -41,38 +41,55 @@
     display: none;
 }
 
-#home .Button {
-    width: 200px;
-    font-size: 1.5em;
+
+#home > .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        text-align: justify;
+        font-family: "Schoolbell", cursive;
+        color: var(--white-01);
+        font-size: 1em;
+        padding: 20px;
+    }
+
+    .Button {
+        height: 40px;
+        width: 120px;
+        font-size: 18px;
+    }
 }
 
-#home p {
-    text-align: justify;
-    font-family: "Schoolbell", cursive;
-    color: var(--white-01);
-    font-size: 1.1em;
-    padding: 20px;
-}
-
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 900px) {
     #home {
         background: var(--main-02);
         margin-top: 0;
         display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
-        grid-template-rows: 80% 20%;
-        padding: 50px;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 50px 100px;
     }
 
     #home h1 {
         color: var(--black-01);
     }
 
+    #home > .text {
+        height: 100%;
+        justify-content: center;
+        padding: 50px;
+        p {
+            color: #554f46;
+        }
+    }
+
     #home .img-container {
         display: block;
         position: relative;
         width: 100%;
-        height: 100%;
+        left: -50px;
+        aspect-ratio: 1;
 
         .sarah {
             width: 100%;
@@ -82,18 +99,17 @@
 
         .dog,.pinterest,.coffee {
             position: absolute;
-            right: 0;
+            right: -30px;
             height: 175px;
         }
 
         .dog {
-            top: 40px;
             width: 175px;
             object-fit: cover;
         }
         
         .pinterest {
-            top: 230px;
+            top: 190px;
             width: 175px;
             object-fit: cover;
         }
@@ -118,5 +134,29 @@
     
     #home .flower {
         display: block;
+    }
+
+    #home .line {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        width: 80%;
+        height: 5px;
+        font-size: 5em;
+        background: var(--main-04);
+        position: relative;
+        margin: auto;
+
+        &::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: var(--main-04);
+            border-radius: 50%;
+            position: absolute;
+            right: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
     }
 }
