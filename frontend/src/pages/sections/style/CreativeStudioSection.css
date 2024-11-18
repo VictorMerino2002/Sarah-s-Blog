@@ -1,0 +1,11 @@
+#creativestudio {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+
+#creativestudio .Button {
+    width: 200px;
+    font-size: 1.2em;
+}

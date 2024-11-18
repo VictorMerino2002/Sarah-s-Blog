@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     z-index: 999;
-    background: var(--main-01);
+    background: var(--main-brown-01);
     font-family: "Schoolbell", cursive;
     font-weight: 400;
     font-size: 18px;
@@ -20,18 +20,18 @@
     border: none;
     height: 50px;
     padding: 0 20px;
-    color: var(--black-01);
+    color: var(--main-white-01);
     cursor: pointer;
 }
 
 .Navigation div a {
     padding: 20px;
     text-decoration: none;
-    color: var(--black-01);
+    color: var(--main-white-01);
 }
 
 .Navigation div a:hover {
-    color: var(--main-03);
+    color: var(--main-green-01);
 }
 
 .Navigation .open {
@@ -42,13 +42,14 @@
     display: none;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 900px) {
 
     .Navigation {
         position: fixed;
         top: 5px;
         left: 50%;
         transform: translateX(-50%);
+        background: var(--main-white-01);
         width: max-content;
         height: 50px;
         padding: 0 50px;
@@ -62,6 +63,10 @@
         align-items: center;
         justify-content: center;
         transition: all 1s;
+
+        a {
+            color: var(--black-01);
+        }
     }
 
     .Navigation.close {
@@ -94,8 +99,11 @@
         }
     }
 
+    .Navigation .open-close-btn {
+        color: var(--black-01);
+    }
 
     .Navigation .open-close-btn:hover {
-        color: var(--main-01);
+        color: var(--main-green-02);
     }
   }

@@ -44,7 +44,7 @@ export const PostEdit = () => {
         const accepted = confirm("Estas seguro de que quieres eliminar el post?")
         if (!accepted) return
         deletePost(params.id)
-        navigate("/tourism")
+        navigate("/admin/tourism")
     }
 
     return (

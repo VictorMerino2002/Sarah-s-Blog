@@ -16,7 +16,7 @@ export const MagazineList = ({magazines, editor}) => {
     }
 
     return (
-        <>
+        <div className="magazine-list">
         {magazines.map(magazine => (
             <div className="Magazine" key={magazine.id}>
                 {editor && (
@@ -27,6 +27,6 @@ export const MagazineList = ({magazines, editor}) => {
                 <PDFThumbnail key={magazine.id} id={magazine.id} title={magazine.title} date={magazine.date} base64={magazine.content} />
             </div>
         ))}
-        </>
+        </div>
     )
 }

@@ -15,10 +15,10 @@ export const Navigation = () => {
         <nav className={`Navigation ${openNav ? "open" : "close"}`}>
             <button className="open-close-btn" onClick={handleClick}><span className="material-symbols-outlined">menu</span></button>
             <div className={openNav ? "open" : "close"}>
-                    <Link to={"/admin"}>About Me</Link>
-                    <Link>My Book</Link>
-                    <Link to={"/admin/magazines"}>Creative Studio</Link>
-                    <Link to={"/admin/tourism"}>Work & Life</Link>
+                    <Link to={"/admin#home"}>About Me</Link>
+                    <Link to={"/admin#mybook"}>My Book</Link>
+                    <Link to={"/admin#creativestudio"}>Creative Studio</Link>
+                    <Link to={"/admin"}>Work & Life</Link>
             </div>
         </nav>
     )

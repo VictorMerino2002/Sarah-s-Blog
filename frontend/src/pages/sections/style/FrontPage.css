@@ -49,22 +49,14 @@
 
     p {
         text-align: justify;
-        font-family: "Schoolbell", cursive;
         color: var(--white-01);
-        font-size: 1em;
         padding: 20px;
-    }
-
-    .Button {
-        height: 40px;
-        width: 120px;
-        font-size: 18px;
     }
 }
 
 @media only screen and (min-width: 900px) {
     #home {
-        background: var(--main-02);
+        background: var(--main-beige-01);
         margin-top: 0;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -73,6 +65,11 @@
 
     #home h1 {
         color: var(--black-01);
+        margin: auto;
+    }
+
+    #home img {
+        margin: auto;
     }
 
     #home > .text {
@@ -80,7 +77,7 @@
         justify-content: center;
         padding: 50px;
         p {
-            color: #554f46;
+            color: var(--main-brown-01);
         }
     }
 
@@ -143,7 +140,7 @@
         width: 80%;
         height: 5px;
         font-size: 5em;
-        background: var(--main-04);
+        background: var(--main-green-01);
         position: relative;
         margin: auto;
 
@@ -151,7 +148,7 @@
             content: '';
             width: 10px;
             height: 10px;
-            background: var(--main-04);
+            background: var(--main-green-01);
             border-radius: 50%;
             position: absolute;
             right: -5px;

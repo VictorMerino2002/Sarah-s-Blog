@@ -70,9 +70,7 @@ export const MagazineIndex = () => {
                 </form>
             )}
 
-            <section className="magazine-list">
-                <MagazineList magazines={magazines} editor={true}/>
-            </section>
+            <MagazineList magazines={magazines} editor={true}/>
         </main>
         </>
     )

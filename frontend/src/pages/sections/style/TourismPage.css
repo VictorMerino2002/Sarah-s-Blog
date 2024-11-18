@@ -4,4 +4,5 @@
     align-items: center;
     gap: 50px;
     padding: 50px 20%;
+    background: var(--main-brown-01);
 }

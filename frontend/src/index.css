@@ -12,11 +12,13 @@
   --yellow-01 : #fcff44;
   --yellow-02 : #d7da34;
 
-  --main-01: #fff8f1;
-  --main-02: #dfd6bf;
-  --main-03: #a2b542;
-  --main-04: #cbd17d;
-  --main-05: #8e9257;
+  --main-white-01: #fff8f1;
+  --main-beige-01: #dfd6bf;
+  --main-green-01: #a2b542;
+  --main-green-02: #cbd17d;
+  --main-green-03: #8e9257;
+
+  --main-brown-01: #554f46;
 }
 
 @font-face {
@@ -49,6 +51,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Schoolbell", cursive;
 }
 
 .error-msg {
@@ -61,6 +64,16 @@
 
 main {
   margin-top: 60px;
+}
+
+body {
+  background: var(--main-beige-01);
+}
+
+section h2 {
+  width: 100%;
+  text-align: center;
+  color: var(--main-green-01);
 }
 
 @media only screen and (min-width: 600px) {
