@@ -1,7 +1,6 @@
 import { Navigation } from "../components/Navigation"
 import { FrontSection } from "./sections/FrontSection"
 import { MyBookSection } from "./sections/MyBookSection"
-import { TourismSection } from  "./sections/TourismSection"
 import { CreativeStudioSection } from "./sections/CreativeStudioSection"
 import { useLocation } from "react-router-dom"
 import { useEffect } from "react"
@@ -25,7 +24,6 @@ export const Home = () => {
         <FrontSection />
         <MyBookSection />
         <CreativeStudioSection />
-        <TourismSection />
         </>
     )
 }
