@@ -1,5 +1,5 @@
 import { Button } from "../components/Button"
-import { Navigation } from "../components/Navigation"
+import { Navigation } from "../components/Navigation/Navigation"
 import { useEffect, useRef, useState } from "react"
 import { createMagazine, getAllMagazine } from "../api/magazineApi"
 import { MagazineList } from "../components/MagazineList"

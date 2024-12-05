@@ -1,4 +1,4 @@
-import { Navigation } from "../components/Navigation"
+import { Navigation } from "../components/Navigation/Navigation"
 import { FrontSection } from "./sections/FrontSection"
 import { MyBookSection } from "./sections/MyBookSection"
 import { CreativeStudioSection } from "./sections/CreativeStudioSection"

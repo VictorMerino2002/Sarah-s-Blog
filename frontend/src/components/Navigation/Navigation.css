@@ -42,20 +42,54 @@
     display: none;
 }
 
+.Dropdown button {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    text-align: left;
+    padding: 20px;
+    font-size: 18px;
+    border: none;
+    background: none;
+    color: var(--main-white-01);
+    cursor: pointer;
+}
+
+.Dropdown div {
+    display: flex;
+    background: var(--main-brown-02);
+
+    & > a {
+        transition: all 1s;
+    }
+}
+
+.Dropdown .link-container-close {
+    padding: 0;
+    & > a {
+        opacity: 0;
+        height: 0;
+        font-size: 0;
+        padding: 0;
+    }
+}
+
 @media only screen and (min-width: 900px) {
 
     .Navigation {
         position: fixed;
-        top: 5px;
+        top: 10px;
         left: 50%;
         transform: translateX(-50%);
         background: var(--main-white-01);
-        width: max-content;
-        height: 50px;
+        min-width: max-content;
+        width: 70%;
+        height: 60px;
         padding: 0 50px;
         border-radius: 5em;
         display: flex;
-        transition: left 1s;
+        transition: all 1s;
     }
 
     .Navigation > div {
@@ -69,41 +103,57 @@
         }
     }
 
-    .Navigation.close {
+    .Navigation.open {
         left: 20%;
         padding: 0;
+        width: max-content;
     }
     
-    .Navigation.open {
+    .Navigation.close {
         left: 50%;
     }
 
-    .Navigation .open {
-        width: 600px;
-
-        a {
-            width: max-content;
-        }
+    .Navigation .close {
+        width: 100%;
     }
 
     .Navigation .close {
-        display: block;
-        width: 0;
+        display: flex;
+        justify-content: space-around;
+        font-size: 1.5em;
+    }
 
+    .Navigation .open {
         & > * {
             display: none;
-        }
-
-        a {
-            width: 0;
         }
     }
 
     .Navigation .open-close-btn {
         color: var(--black-01);
+        height: 100%;
+
+        & > span {
+            font-size: 3em;
+        }
     }
 
     .Navigation .open-close-btn:hover {
         color: var(--main-green-02);
+    }
+
+    .Dropdown button {
+        color: var(--black-01);
+        font-size: 1em;
+    }
+
+    .Dropdown div {
+        position: absolute;
+        top: 50px;
+        padding-top: 20px;
+        background: var(--main-white-01);
+        border-radius: 0 0 1em 1em;
+        text-align: center;
+        min-width: 190px;
     }
   }
