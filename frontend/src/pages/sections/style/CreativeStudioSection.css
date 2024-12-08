@@ -1,11 +1,94 @@
 #creativestudio {
     display: flex;
     flex-direction: column;
-    gap: 50px;
     align-items: center;
+    gap: 50px;
 }
 
-#creativestudio .Button {
-    width: 200px;
-    font-size: 1.2em;
+#creativestudio header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    img {
+        display: none;
+    }
+
+    h2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-family: 'Edwardian', cursive;
+        font-weight: 400;
+        font-size: 4em;
+    }
+
+    h2 > b {
+        font-family: 'Sinera';
+        font-weight: 400;
+    }
+
+    span {
+        background: var(--main-green-02);
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #creativestudio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        height: 110dvh;
+        padding-top: 70px;
+    }
+    
+    #creativestudio header {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        width: 100%;
+        margin-top: 100px;
+    
+        img {
+            display: block;
+        }
+
+        h2 {
+            gap: 5vw;
+            font-size: 7em;
+            align-items: baseline;
+
+            b {
+                font-size: 1.3em;
+            }
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+            height: max-content;
+            font-size: 20px;
+        }
+    }
+    
+    #creativestudio .eagel {
+        position: absolute;
+        width: 15vw;
+        top: -25%;
+        left: 30%;
+        rotate: 10deg;
+    }
+    
+    #creativestudio .hand {
+        position: absolute;
+        top: 25%;
+        right: 0;
+        width: 15vw;
+    }
 }

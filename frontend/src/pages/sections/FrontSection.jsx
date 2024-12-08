@@ -28,12 +28,15 @@ export const FrontSection = () => {
 
             <div className="text">
                 <p>Welcome to my blog! I’m Sarah, a 20-year-old diving into everything life has to offer—music, books, travels, studies, work and the ups and downs along the way. Here, I’ll share my personal experiences and insights, hoping to connect with those on similar paths or just curious about a fresh perspective. Whether you’re here for inspiration, advice, or just a relatable read, I’m excited to have you on this journey with me. Let’s grow and learn together!</p>
-                <Button variant={"main"}>Subscribe</Button>
             </div>
 
             <img src={disc} alt="disco vinillo" className="disc" />
             <span className="line"></span>
-            <img src={flower} alt="flor rosa" className="flower"/>
+
+            <div className="flower-subscribe">
+                <Button variant={"main"}>Subscribe</Button>
+                <img src={flower} alt="flor rosa" className="flower"/>
+            </div>
         </section>
     )
 }

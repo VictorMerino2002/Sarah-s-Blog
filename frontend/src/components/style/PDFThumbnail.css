@@ -3,14 +3,11 @@
     cursor: pointer;
 
     .rpv-core__viewer {
-        border-radius: .5em;
         overflow: hidden;
-        border: 2px solid #000;
-
     }
     
     &:hover .rpv-core__viewer {
-        border-color: #49f;
+        transform: scale(1.05);
     }
 
     p {

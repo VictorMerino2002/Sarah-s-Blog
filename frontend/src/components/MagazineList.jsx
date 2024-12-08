@@ -20,7 +20,7 @@ export const MagazineList = ({magazines, editor}) => {
         {magazines.map(magazine => (
             <div className="Magazine" key={magazine.id}>
                 {editor && (
-                <Button variant={"black negative btn-delete"} handleClick={() => handleClick(magazine)}>
+                <Button variant={"black btn-delete"} handleClick={() => handleClick(magazine)}>
                     <span className="material-symbols-outlined">delete</span>
                 </Button>
                 )}

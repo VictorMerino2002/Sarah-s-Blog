@@ -17,6 +17,7 @@ export const Navigation = () => {
             <button className="open-close-btn" onClick={handleClick}><span className="material-symbols-outlined">menu</span></button>
             <div className={openNav ? "open" : "close"}>
                     <Dropdown name={"About Me"}>
+                        <Link to={"/admin#aboutme"}>About Me</Link>
                         <Link>Contact</Link>
                     </Dropdown>
                     <Link to={"/admin#mybook"}>My Book</Link>

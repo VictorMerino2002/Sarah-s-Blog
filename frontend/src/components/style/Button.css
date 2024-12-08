@@ -20,3 +20,9 @@
         background: var(--main-green-03);
     }
 }
+
+.Button.black {
+    background: var(--black-01);
+    color: var(--red-01);
+    border: 1px solid var(--red-01);
+}

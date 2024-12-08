@@ -1,9 +1,9 @@
 import { Navigation } from "../components/Navigation/Navigation"
 import { FrontSection } from "./sections/FrontSection"
-import { MyBookSection } from "./sections/MyBookSection"
 import { CreativeStudioSection } from "./sections/CreativeStudioSection"
 import { useLocation } from "react-router-dom"
 import { useEffect } from "react"
+import { AboutMeSection } from "./sections/AboutMeSection"
 export const Home = () => {
 
     const location = useLocation()
@@ -20,9 +20,9 @@ export const Home = () => {
 
     return (
         <>
-        <Navigation activeTab={"tab1"} />
+        <Navigation />
         <FrontSection />
-        <MyBookSection />
+        <AboutMeSection />
         <CreativeStudioSection />
         </>
     )

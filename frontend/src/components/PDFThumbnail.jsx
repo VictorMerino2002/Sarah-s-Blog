@@ -39,8 +39,6 @@ export const PDFThumbnail = ({ id, title, date, base64 }) => {
           />
         </Worker>
       ) : (<p>Cargando PDF ...</p>)}
-      <p>{title}</p>
-      <p>{date}</p>
     </div>
   )
 }

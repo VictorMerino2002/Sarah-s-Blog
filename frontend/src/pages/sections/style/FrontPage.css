@@ -55,17 +55,19 @@
 }
 
 @media only screen and (min-width: 900px) {
+
     #home {
         background: var(--main-beige-01);
-        margin-top: 0;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        padding: 50px 100px;
+        grid-template-columns: 1.5fr 1.5fr 1fr;
+        margin: 60px;
+        height: calc(100dvh - 70px);
     }
 
     #home h1 {
         color: var(--black-01);
         margin: auto;
+        font-size: 5vw;
     }
 
     #home img {
@@ -74,19 +76,23 @@
 
     #home > .text {
         height: 100%;
+        margin: auto;
         justify-content: center;
-        padding: 50px;
         p {
             color: var(--main-brown-01);
+            text-align: justify;
+            font-size: 1.2vw;
         }
     }
 
     #home .img-container {
         display: block;
         position: relative;
-        width: 100%;
+        width: 90%;
         left: -50px;
         aspect-ratio: 1;
+        margin: auto;
+
 
         .sarah {
             width: 100%;
@@ -97,22 +103,22 @@
         .dog,.pinterest,.coffee {
             position: absolute;
             right: -30px;
-            height: 175px;
+            height: 30%;
         }
-
+        
         .dog {
-            width: 175px;
             object-fit: cover;
+            aspect-ratio: 1;
         }
         
         .pinterest {
-            top: 190px;
-            width: 175px;
+            top: 40%;
             object-fit: cover;
+            aspect-ratio: 1;
         }
         
         .coffee {
-            top: 420px;
+            top: 80%;
         }
     }
 
@@ -154,6 +160,18 @@
             right: -5px;
             top: 50%;
             transform: translateY(-50%);
+        }
+    }
+
+    #home .flower-subscribe {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .flower {
+            position: absolute;
+            right: 0px;
+            width: 10vw;
         }
     }
 }
