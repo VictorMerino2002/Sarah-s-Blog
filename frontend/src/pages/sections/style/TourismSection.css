@@ -1,0 +1,71 @@
+#tourism {
+    padding: 20px;
+
+    .fish {
+        display: none;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            font-family: 'Edwardian', cursive;
+            font-size: 6em;
+            font-weight: 400;
+        }
+
+        span {
+            font-size: 2em;
+            color: var(--main-green-01);
+            -webkit-text-stroke: 1px var(--main-green-04);
+        }
+    }
+
+    .caset {
+        display: none;
+    }
+
+    .magazine-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #tourism {
+        position: relative;
+        padding: 100px 10%;
+        min-height: calc(100dvh + 50px);
+
+        .fish {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .magazine-container {
+            position: absolute;
+            bottom: 100px;
+        }
+
+        .text {
+            position: absolute;
+            width: 50%;
+            left: 45%;
+            padding: 0 150px;
+
+            p {
+                font-size: 1.3em;
+            }
+        }
+
+        .caset {
+            display: block;
+        }
+    }
+}

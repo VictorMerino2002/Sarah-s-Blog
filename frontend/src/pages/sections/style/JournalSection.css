@@ -1,0 +1,112 @@
+#journal {
+    background: var(--main-brown-01);
+    padding: 20px;
+    padding-bottom: 100px;
+    position: relative;
+    overflow: hidden;
+
+    & > .magazine-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .Button {
+        z-index: 3;
+    }
+
+    header {
+        position: relative;
+        h2 {
+            font-size: 6em;
+            font-family: 'Edwardian', cursive;
+            font-weight: 400;
+            -webkit-text-stroke: 1px #fff;
+            text-align: center;
+        }
+
+        p {
+            color: var(--main-green-01);
+            font-size: 1.5em;
+            text-align: center;
+            padding-bottom: 50px;
+        }
+        z-index: 2;
+    }
+
+    .magazine-list {
+        position: relative;
+        z-index: 2;
+        padding-bottom: 30px;
+    }
+
+
+    .candle {
+        display: none;
+    }
+
+    .page-1 {
+        position: absolute;
+        top: -30px;
+        left: -100px;
+        z-index: 1;
+        opacity: .3;
+    }
+
+    .page-2 {
+        position: absolute;
+        bottom: 0;
+        left: -100px;
+        width: 500px;
+        opacity: .3;
+    }
+
+    .page-3 {
+        position: absolute;
+        top: 30%;
+        right: -20%;
+        width: 200px;
+        rotate: 10deg;
+        z-index: 1;
+        opacity: .3;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #journal {
+        min-height: calc(100dvh + 50px);
+        padding: 100px 10%;
+
+        .magazine-list {
+            justify-content: left;
+        }
+
+        .Button {
+            position: absolute;
+            top: 600px;
+            left: calc(10% + 350px);
+        }
+
+        .candle {
+            display: block;
+            position: absolute;
+            right: 20px;
+            bottom: -150px;
+            z-index: 2;
+        }
+
+        .page-1 {
+            top: 100px;
+        }
+
+        .page-2 {
+            width: 1000px;
+            left: -100px;
+        }
+
+        .page-3 {
+            right: -100px;
+            width: 500px;
+        }
+    }
+}

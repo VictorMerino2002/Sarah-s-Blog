@@ -1,0 +1,223 @@
+#workandlife {
+
+    height: 100dvh;
+    padding: 20px;
+    padding-top: 100px;
+    overflow: hidden;
+    
+    .main {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        height: 100%;
+        h2 {
+            font-size: 4em;
+            font-weight: 400;
+            text-align: center;
+            
+            span {
+                font-family: 'Edwardian', cursive;
+            }
+        }
+
+        b {
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-weight: 400;
+        }
+
+        .coffe {
+            display: none;
+        }
+
+        .tourism, .journal {
+            position: absolute;
+            z-index: 3;
+
+            button {
+                width: 100px;
+                background: none;
+                border: none;
+                font-size: 1.2em;
+                cursor: pointer;
+
+                &:active {
+                    color: #fff;
+                }
+            }
+        }
+        
+        .text {
+            position: relative;
+            height: 100%;
+            
+            .pink {
+                position: absolute;
+                width: 450px;
+                rotate: 30deg;
+            }
+            
+            p {
+                position: absolute;
+                z-index: 3;
+                top: 50px;
+            }
+        }
+        
+        .tourism {
+            bottom: 150px;
+            button {
+                position: absolute;
+            }
+
+            .green {
+                position: absolute;
+                width: 300px;
+                top: -50px;
+                left: -140px;
+            }
+        }
+
+        .journal {
+            display: flex;
+            flex-direction: column;
+            bottom: 0;
+            right: 0;
+
+            button {
+                position: absolute;
+                top: 40px;
+                left: 25px;
+            }
+
+            .cloud {
+                width: 150px;
+            }
+
+            .bear {
+                width: 200px;
+                rotate: -10deg;
+            }
+        }
+    }
+    
+    .images {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #workandlife {
+        display: flex;
+        position: relative;
+        min-height: calc(100dvh + 50px);
+        
+        .main {
+            width: 50%;
+
+            h2 {
+                font-size: 6em;
+                position: absolute;
+                width: 450px;
+                height: 270px;
+                right: 0;
+
+                b {
+                    position: absolute;
+                    font-size: 1.5em;
+                    top: -20px;
+                    right: 0;
+                }
+
+                span:last-child {
+                    position: absolute;
+                    bottom: 0;
+                }
+            }
+
+            .text {
+                position: absolute;
+                top: 45%;
+                left: 60%;
+                width: 300px;
+
+                .pink {
+                    rotate: 90deg;
+                    left: -40%;
+                    top: 50px;
+                    width: 100%;
+                }
+            }
+
+            .coffe {
+                display: block;
+                position: absolute;
+                width: 220px;
+                top: 50px;
+                right: 150px;
+            }
+
+            .tourism {
+                top: 200px;
+                
+                button {
+                    top: 25px;
+                    left: 100px;
+                }
+
+                .green {
+                    width: 500px;
+                    left: -200px;
+                }
+            }
+
+            .journal {
+                left: 100px;
+                bottom: -30px;
+                
+                button {
+                    left: 50px;
+                    top: 55px;
+                }
+
+                .cloud {
+                    width: 200px;
+                }
+
+                .bear {
+                    width: 40%;
+                }
+            }
+        }
+
+        .images {
+            display: block;
+
+            .multiples {
+                height: 100%;
+            }
+
+            .clip, .flower-1, .flower-2 {
+                position: absolute;
+            }
+
+            .clip {
+                top: 36%;
+                left: 72%;
+                width: 150px;
+            }
+
+            .flower-1 {
+                top: -100px;
+                right: -10%;
+                width: 30%;
+            }
+
+            .flower-2 {
+                top: 20%;
+                right: -20%;
+                width: 30%;
+            }
+        }
+    }
+}

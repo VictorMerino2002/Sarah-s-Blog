@@ -1,4 +1,3 @@
-import { Button } from "../../components/Button"
 import "./style/FrontPage.css"
 import plant from "../../assets/planta.webp"
 import disc from "../../assets/disco.webp"
@@ -7,6 +6,7 @@ import sarah from "../../assets/portada.webp"
 import dog from "../../assets/perro.webp"
 import pinterest from "../../assets/pinterest.png"
 import coffee from "../../assets/cafe.png"
+import { Link } from "react-router-dom"
 
 export const FrontSection = () => {
     return (
@@ -34,7 +34,7 @@ export const FrontSection = () => {
             <span className="line"></span>
 
             <div className="flower-subscribe">
-                <Button variant={"main"}>Subscribe</Button>
+                <Link className="Button main" style={{textAlign: "center", textDecoration: "none", color: "#000"}} to={"/subscribe"}>Subscribe</Link>
                 <img src={flower} alt="flor rosa" className="flower"/>
             </div>
         </section>

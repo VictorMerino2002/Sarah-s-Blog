@@ -5,10 +5,11 @@
     transform: translate(-50%,-50%);
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 20px;
     width: 80%;
-    border: 2px solid #000;
+    border: 1px solid #ccc;
+    box-shadow: 0 10px 10px #0005;
+    border-radius: .4em;
     padding: 20px;
     z-index: 10;
     background: #fff;
@@ -18,9 +19,35 @@
     }
 
     input[type="text"] {
-        border: none;
-        border-bottom: 3px solid #000;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: .4em;
     }
+
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .Button:first-child {
+        position: absolute;
+        top: 0;
+        right: -50px;
+    }
+
+    .Button:last-child {
+        margin: auto;
+    }
+}
+
+.Magazines-page .new-magazine {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.Magazines-page .magazine-list {
+    margin-top: 175px;
 }
 
 @media screen and (min-width: 900px) {

@@ -12,20 +12,22 @@ export const Navigation = () => {
         setOpenNav(!openNav)
     }
 
+    const path = window.location.pathname.includes("admin") ? "/admin" : "/"
+
     return (
         <nav className={`Navigation ${openNav ? "open" : "close"}`}>
             <button className="open-close-btn" onClick={handleClick}><span className="material-symbols-outlined">menu</span></button>
             <div className={openNav ? "open" : "close"}>
                     <Dropdown name={"About Me"}>
-                        <Link to={"/admin#aboutme"}>About Me</Link>
-                        <Link>Contact</Link>
+                        <Link to={path + "#aboutme"}>About Me</Link>
+                        <Link to={path + "#contact"}>Contact</Link>
                     </Dropdown>
-                    <Link to={"/admin#mybook"}>My Book</Link>
-                    <Link to={"/admin#creativestudio"}>Creative Studio</Link>
+                    <Link to={path+ "#creativestudio"}>Creative Studio</Link>
+                    <Link to={path + "#mybook"}>My Book</Link>
                     <Dropdown name={"Work and life"}>
-                        <Link to={"/admin"}>Life</Link>
-                        <Link to={"/admin"}>Work</Link>
-                        <Link to={"/admin"}>Tourism</Link>
+                        <Link to={path + "#workandlife"}>Life</Link>
+                        <Link to={path + "#journal"}>Work</Link>
+                        <Link to={path + "#tourism"}>Tourism</Link>
                     </Dropdown>
             </div>
         </nav>

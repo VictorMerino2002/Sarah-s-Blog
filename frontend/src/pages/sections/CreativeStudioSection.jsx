@@ -12,10 +12,12 @@ export const CreativeStudioSection = () => {
     const [magzines, setMagazines] = useState([])
     useEffect(() => {
         getAllMagazine()
-        .then(data => setMagazines(data.data))
+        .then(data => setMagazines(data.data.reverse()))
     },[])
 
     const navigate = useNavigate()
+
+    const url = window.location.pathname.includes("admin") ? "/admin/magazines" : "/magazines"
 
     return (
         <section id="creativestudio">
@@ -25,8 +27,8 @@ export const CreativeStudioSection = () => {
                 <span>Expression of thought</span>
                 <img className="hand" src={hand} alt="hand" />
             </header>
-            <MagazineList magazines={magzines} />
-            <Button variant={"main"} handleClick={() => navigate("/admin/magazines")}>See More</Button>
+            <MagazineList magazines={magzines.slice(0,10)} section={"magazines"}/>
+            <Button variant={"main"} handleClick={() => navigate(url)}>See More</Button>
         </section>
     )
 }

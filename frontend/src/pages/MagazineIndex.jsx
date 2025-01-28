@@ -18,7 +18,7 @@ export const MagazineIndex = () => {
     const inputFile = useRef()
 
     useEffect(() => {
-        getAllMagazine().then(data => setMagazines(data.data))
+        getAllMagazine().then(data => setMagazines(data.data.reverse()))
     },[])
 
     const handleSubmit = async (e) => {
@@ -55,9 +55,9 @@ export const MagazineIndex = () => {
 
     return (
         <>
-        <Navigation activeTab={"tab6"} />
+        <Navigation />
         <main className="Magazines-page">
-            <Button variant={"black-border"} handleClick={() => setMagazineModal(true)}>New Magazine</Button>
+            <Button variant={"main new-magazine"} handleClick={() => setMagazineModal(true)}>New Magazine</Button>
             {magazineModal && (
                 <form onSubmit={handleSubmit} className="form-modal">
                     <Button type={"button"} handleClick={() => setMagazineModal(false)}>x</Button>
@@ -66,7 +66,7 @@ export const MagazineIndex = () => {
                     {titleError && <span className="error-msg">Enter a title</span>}
                     <input type="file" ref={inputFile} onChange={handleFileChange} accept=".pdf"/>
                     {fileError && <span className="error-msg">Enter a valid file</span>}
-                    <Button variant={"black-border"} type={"submit"}>Upload</Button>
+                    <Button variant={"main"} type={"submit"}>Upload</Button>
                 </form>
             )}
 

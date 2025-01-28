@@ -5,12 +5,21 @@
     gap: 20px;
     padding: 20px;
     margin-top: 120px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: .4em;
+
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+    }
 }
 
 .Login input {
     width: 100%;
     margin-top: 10px;
     padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: .4em;
 }
 
 @media only screen and (min-width: 600px) {

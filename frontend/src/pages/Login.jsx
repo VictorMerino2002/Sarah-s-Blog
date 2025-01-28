@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Button } from "../components/Button"
 import { Loader } from "../components/Loader"
-import { getToken } from "../api/postApi"
+import { getToken } from "../api/tokenApi"
 import { useNavigate } from "react-router-dom"
 
 import "./style/Login.css"
@@ -50,7 +50,7 @@ export const Login = () => {
                     {errorMsg && <span className="error-msg">{errorMsg}</span>}
                     {loading 
                     ? <Loader />
-                    : <Button type={"submit"} variant={"black"}>Iniciar Sesión</Button>
+                    : <Button type={"submit"} variant={"main"}>Iniciar Sesión</Button>
                     }
                     
             </form>

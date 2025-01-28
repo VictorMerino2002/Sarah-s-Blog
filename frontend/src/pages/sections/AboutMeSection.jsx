@@ -1,6 +1,5 @@
 import "./style/AboutMeSection.css"
-import { Button } from "../../components/Button"
-
+import { Link } from "react-router-dom"
 import sarah0 from "../../assets/aboutme/sarah0.jpg"
 import sarah1 from "../../assets/aboutme/sarah1.jpg"
 import sarah2 from "../../assets/aboutme/sarah2.jpg"
@@ -45,7 +44,7 @@ export const AboutMeSection = () => {
 
             <div>
                 <div className="img-container-2">
-                    <Button variant={"main"}>Subscribe</Button>
+                    <Link className="Button main" style={{textAlign: "center", textDecoration: "none", color: "#000"}} to={"/subscribe"}>Subscribe</Link>
                     <img className="shell-2" src={shell2} alt="shell" />
                     <img className="feet" src={feet} alt="feet" />
                     <img className="sarah-sec-7" src={sarah7} alt="sarah" />

@@ -1,0 +1,146 @@
+#contact {
+    background: var(--main-brown-01);
+    padding: 20px;
+    position: relative;
+    padding-top: 70px;
+    min-height: calc(100dvh + 100px);
+
+    .images-1, .star, .frame {
+        display: none;
+    }
+
+    header {
+        color: var(--main-green-01);
+        text-align: center;
+        font-size: 2em;
+
+        h2 {
+            font-family: 'Edwardian', cursive;
+            font-weight: 400;
+
+            b {
+                font-family:'Times New Roman', Times, serif;
+            }
+        }
+    }
+
+    h3 {
+        color: var(--main-green-01);
+    }
+
+    p {
+        color: #fff;
+    }
+
+    .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 30px 0;
+
+        a {
+            text-decoration: none;
+            color: var(--main-green-01);
+        }
+    }
+
+    .images-2 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #contact {
+        padding: 100px 0;
+        padding-bottom: 0;
+        min-height: 100dvh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .images-1 {
+            display: block;
+            height: 85%;
+            align-self: flex-end;
+        }
+
+        .sec-2 {
+            position: relative;
+
+            p {
+                position: absolute;
+                padding: 0px 17%;
+                top: 20%;
+                font-size: 1.1vw;
+                color: var(--main-brown-01);
+            }
+    
+            .frame {
+                display: block;
+                position: absolute;
+                width: 100%;
+                top: 10%;
+                background: var(--main-beige-01);
+            }
+
+            .links {
+                position: absolute;
+                flex-direction: column;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%);
+
+                a {
+                    font-size: 2.5vh;
+                }
+
+                a:hover {
+                    color: #fff;
+                }
+
+                a:nth-child(1) {
+                    padding-left: 75px;
+                }
+
+                a:nth-child(2) {
+                    padding-left: 50px;
+                }
+
+                a:nth-child(3) {
+                    padding-left: 25px;
+                }
+            }
+        }
+
+        .sec-3 {
+            position: relative;
+            padding: 0 50px;
+            padding-top: 200px;
+
+            h3 {
+                font-size: 2em;
+            }
+            .images-2 {
+                width: 70%;
+            }
+        }
+
+        header {
+            position: absolute;
+            right: 100px;
+            top: 75px;
+
+            font-size: 3em;
+
+            .star {
+                display: block;
+                position: absolute;
+                right: -100px;
+                bottom: -100px;
+                width: 150px;
+            }
+        }
+
+    }
+}

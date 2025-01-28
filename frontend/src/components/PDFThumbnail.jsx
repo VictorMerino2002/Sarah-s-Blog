@@ -6,7 +6,7 @@ import { pageThumbnailPlugin } from "./plugins/thumbnail"
 import "./style/PDFThumbnail.css"
 import { useNavigate } from "react-router-dom"
 
-export const PDFThumbnail = ({ id, title, date, base64 }) => {
+export const PDFThumbnail = ({ id, title, date, base64, section }) => {
   const [pdfData, setPdfData] = useState(null)
 
   useEffect(() => {
@@ -27,10 +27,21 @@ export const PDFThumbnail = ({ id, title, date, base64 }) => {
 
   const pageThumbnailPluginInstance = pageThumbnailPlugin(<Cover width={250} getPageIndex={() => 0} />)
 
-  const navigate = useNavigate()
+  const openBase64Pdf = (base64Data) => {
+    const byteCharacters = atob(base64Data)
+    const byteNumbers = new Array(byteCharacters.length).fill(0).map((_, i) => byteCharacters.charCodeAt(i))
+    const byteArray = new Uint8Array(byteNumbers)
+    const blob = new Blob([byteArray], { type: 'application/pdf' })
+  
+    const blobUrl = URL.createObjectURL(blob)
+  
+    window.open(blobUrl)
+  
+    setTimeout(() => URL.revokeObjectURL(blobUrl), 1000)
+  }
 
   return (
-    <div className="PDFThumbnail" onClick={() =>navigate("/magazines/"+ id)}>
+    <div className="PDFThumbnail" onClick={() => openBase64Pdf(base64)}>
       {pdfData ? (
         <Worker workerUrl={`https://unpkg.com/pdfjs-dist@3.0.279/build/pdf.worker.min.js`}>
           <Viewer 
