@@ -37,8 +37,8 @@ export const Subscription = () => {
                 <h1>Subscribe</h1>
                 <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="email" required/>
                 <Button variant={"main"}>Subscribe</Button>
+                {msg && <p>{msg}</p>}
             </form>
-            {msg && <p>{msg}</p>}
         </main>
     )
 }
