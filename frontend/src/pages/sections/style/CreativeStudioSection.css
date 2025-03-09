@@ -2,7 +2,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
     gap: 50px;
+    padding-top: 100px;
+    min-height: 100dvh;
 }
 
 #creativestudio header {
@@ -10,23 +13,64 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    
+    .hand {
+        position: absolute;
+        top: 70px;
+        rotate: 60deg;
+        width: 200px;
+        left: 0;
+        transform: translateY(10%);
+        z-index: 2;
+    }
+    
+    .flower {
+        width: 70px;
+    }
 
-    img {
+    .moon {
+        display: none;
+    }
+
+    .flowers {
+        display: none;
+    }
+
+    .flowers-label {
         display: none;
     }
 
     h2 {
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
         justify-content: center;
+        z-index: 3;
+        gap: 20px;
         font-family: 'Edwardian', cursive;
         font-weight: 400;
-        font-size: 4em;
+        font-size: 4.5rem;
+        color: var(--main-green-02);
+        -webkit-text-stroke: 1px var(--main-green-01);
+    }
+
+    h2 > span {
+        width: 100%;
+        font-family: 'Sinera';
+        font-weight: 400;
+        font-size: 2.5rem;
+        text-align: center;
+        background: none;
+        color: var(--main-beige-01);
+        -webkit-text-stroke: 2px var(--main-brown-01);
     }
 
     h2 > b {
         font-family: 'Sinera';
         font-weight: 400;
+        color: var(--main-brown-01);
+        font-size: 4rem;
+        -webkit-text-stroke: 2px var(--main-brown-02);
     }
 
     span {
@@ -45,54 +89,58 @@
         padding-bottom: 50px;
     }
     
-    #creativestudio .magazine-list {
-        padding: 0 15%;
-    }
-
-    #creativestudio header {
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 50px;
-        width: 100%;
-        margin-top: 100px;
-    
-        img {
-            display: block;
-        }
-
+    #creativestudio > header {
         h2 {
-            gap: 5vw;
-            font-size: 7em;
-            align-items: baseline;
+            font-size: 7rem;
+
+            span {
+                font-size: 7rem;
+                text-align: left;
+            }
 
             b {
-                font-size: 1.3em;
+                font-size: 7rem;
             }
         }
 
-        span {
-            display: flex;
-            align-items: center;
-            height: max-content;
-            font-size: 20px;
+        .flower {
+            width: 150px;
+            transform: translate(-60px, 10px);
+        }
+
+        .hand {
+            width: 300px;
+            top: 0;
+            left: 0;
+        }
+
+        .moon {
+            display: block;
+            position: absolute;
+            width: 200px;
+            top: 50px;
+        }
+
+        .flowers {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 600px;
+        }
+
+        .flowers-label {
+            display: block;
+            position: absolute;
+            top: 110px;
+            right: 240px;
+            z-index: 3;
+            background: var(--main-green-01);
+            padding: 10px;
         }
     }
-    
-    #creativestudio .eagel {
-        position: absolute;
-        width: 15vw;
-        top: -25%;
-        left: 30%;
-        rotate: 10deg;
-    }
-    
-    #creativestudio .hand {
-        position: absolute;
-        top: 25%;
-        right: 0;
-        width: 15vw;
+
+    #creativestudio .magazine-list {
+        padding: 0 15%;
     }
 }

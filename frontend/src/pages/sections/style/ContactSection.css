@@ -57,12 +57,61 @@
         padding-bottom: 0;
         min-height: 100dvh;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 450px 1fr;
 
         .images-1 {
             display: block;
-            height: 85%;
-            align-self: flex-end;
+            position: relative;
+
+            .sarah-1 {
+                width: 150px;
+                position: absolute;
+                left: 300px;
+            }
+
+            .feet {
+                position: absolute;
+                top: 220px;
+                width: 320px;
+                height: 150px;
+                left: 150px;
+            }
+
+            .flower {
+                position: absolute;
+                width: 250px;
+                left: 50px;
+                top: 50px;
+                rotate: -5deg;
+            }
+
+            .disc {
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                top: 380px;
+                left: 70px;
+            }
+
+            .flowers {
+                position: absolute;
+                width: 120px;
+                top: 390px;
+                left: 300px;
+            }
+
+            .phone {
+                position: absolute;
+                top: 600px;
+                width: 500px;
+            }
+
+            .plant {
+                position: absolute;
+                top: 600px;
+                width: 120px;
+                left: 100px;
+            }
         }
 
         .sec-2 {
@@ -70,9 +119,9 @@
 
             p {
                 position: absolute;
-                padding: 0px 17%;
-                top: 20%;
-                font-size: 1.1vw;
+                top: 75px;
+                padding: 80px;
+                font-size: 1em;
                 color: var(--main-brown-01);
             }
     
@@ -87,9 +136,8 @@
             .links {
                 position: absolute;
                 flex-direction: column;
-                bottom: 0;
-                left: 50%;
-                transform: translate(-50%);
+                top: 500px;
+                width: 100%;
 
                 a {
                     font-size: 2.5vh;
@@ -110,6 +158,13 @@
                 a:nth-child(3) {
                     padding-left: 25px;
                 }
+
+                .planets {
+                    position: absolute;
+                    width: 200px;
+                    top: 80px;
+                    right: 100px;
+                }
             }
         }
 
@@ -121,24 +176,38 @@
             h3 {
                 font-size: 2em;
             }
-            .images-2 {
-                width: 70%;
+
+            h3, p {
+                padding: 0 50px;
+            }
+
+            .bear {
+                position: absolute;
+                bottom: 0;
+                width: 250px;
+            }
+
+            .flowers-blue {
+                position: absolute;
+                width: 300px;
+                right: 0;
+                bottom: 0;
             }
         }
 
         header {
             position: absolute;
-            right: 100px;
-            top: 75px;
+            right: 15%;
+            top: 100px;
 
             font-size: 3em;
 
             .star {
                 display: block;
                 position: absolute;
-                right: -100px;
-                bottom: -100px;
-                width: 150px;
+                right: -130px;
+                bottom: -120px;
+                width: 200px;
             }
         }
 

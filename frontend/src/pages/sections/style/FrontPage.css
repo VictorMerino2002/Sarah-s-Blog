@@ -18,7 +18,7 @@
 #home h1 {
     font-family: 'Sinera';
     font-weight: normal;
-    font-size: 55px;
+    font-size: 75px;
     color: var(--white-01);
     z-index: 2;
     width: max-content;
@@ -34,6 +34,10 @@
 }
 
 #home .disc {
+    display: none;
+}
+
+#home .donut {
     display: none;
 }
 
@@ -59,7 +63,8 @@
     #home {
         background: var(--main-beige-01);
         display: grid;
-        grid-template-columns: 1.5fr 1.5fr 1fr;
+        grid-template-columns: 1.2fr 1.5fr 1fr;
+        grid-template-rows: auto 200px;
         margin: 60px;
         height: calc(100dvh - 70px);
     }
@@ -67,7 +72,7 @@
     #home h1 {
         color: var(--black-01);
         margin: auto;
-        font-size: 5vw;
+        font-size: 6vw;
     }
 
     #home img {
@@ -131,10 +136,22 @@
         height: 600px;
     }
     
+    #home .discs {
+        position: relative;
+    }
+
     #home .disc {
         display: block;
     }
-    
+
+    #home .donut {
+        display: block;
+        width: 150px;
+        position: absolute;
+        top: -50px;
+        left: 100px;
+    }
+
     #home .flower {
         display: block;
     }

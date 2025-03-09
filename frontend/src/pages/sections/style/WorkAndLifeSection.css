@@ -33,17 +33,20 @@
         .tourism, .journal {
             position: absolute;
             z-index: 3;
+            cursor: pointer;
 
             button {
                 width: 100px;
                 background: none;
                 border: none;
-                font-size: 1.2em;
+                font-size: 1.5em;
                 cursor: pointer;
+                font-family:'Times New Roman', Times, serif;
+                font-weight: 600;
+            }
 
-                &:active {
-                    color: #fff;
-                }
+            &:hover {
+                filter: grayscale(.5);
             }
         }
         
@@ -136,16 +139,22 @@
             }
 
             .text {
-                position: absolute;
-                top: 45%;
+                display: flex;
+                justify-content: center;
+                padding-top: 0;
+                top: 35%;
                 left: 60%;
                 width: 300px;
 
                 .pink {
-                    rotate: 90deg;
+                    rotate: 70deg;
                     left: -40%;
                     top: 50px;
-                    width: 100%;
+                    width: 600px;
+                }
+
+                p {
+                    width: 150px;
                 }
             }
 
@@ -155,6 +164,7 @@
                 width: 220px;
                 top: 50px;
                 right: 150px;
+                z-index: 3;
             }
 
             .tourism {
@@ -162,7 +172,8 @@
                 
                 button {
                     top: 25px;
-                    left: 100px;
+                    left: 70px;
+                    font-size: 2em;
                 }
 
                 .green {
@@ -174,18 +185,20 @@
             .journal {
                 left: 100px;
                 bottom: -30px;
+                width: 300px;
                 
                 button {
-                    left: 50px;
-                    top: 55px;
+                    left: 80px;
+                    top: 90px;
+                    font-size: 2em;
                 }
 
                 .cloud {
-                    width: 200px;
+                    width: 100%;
                 }
 
                 .bear {
-                    width: 40%;
+                    width: 100%;
                 }
             }
         }
@@ -195,6 +208,7 @@
 
             .multiples {
                 height: 100%;
+                transform: translateY(20px);
             }
 
             .clip, .flower-1, .flower-2 {

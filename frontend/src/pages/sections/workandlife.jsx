@@ -4,12 +4,15 @@ import green from "../../assets/workandlife/green.svg"
 import cloud from "../../assets/workandlife/cloud.svg"
 import bear from "../../assets/workandlife/bear.webp"
 import coffe from "../../assets/workandlife/coffe.webp"
-import images from "../../assets/workandlife/images.png"
+import images from "../../assets/workandlife/images.webp"
 import clip from "../../assets/workandlife/clip.webp"
 import flower1 from "../../assets/workandlife/flower-1.webp"
 import flower2 from "../../assets/workandlife/flower-2.webp"
+import { Link } from "react-router-dom"
 
 export const WorkAndLifeSection = () => {
+    const path = window.location.pathname.includes("admin") ? "/admin" : "/"
+
     return (
         <section id="workandlife">
             <div className="main">
@@ -21,16 +24,16 @@ export const WorkAndLifeSection = () => {
 
                 <img src={coffe} alt="coffe" className="coffe"/>
 
-                <div className="tourism">
+                <Link className="tourism" to={path + "#tourism"}>
                     <img src={green} alt="green" className="green"/>
                     <button>TOURISM</button>
-                </div>
+                </Link>
 
-                <div className="journal">
+                <Link className="journal" to={path + "#journal"}>
                     <button>JOURNAL</button>
                     <img src={cloud} alt="" className="cloud"/>
                     <img src={bear} alt="bear" className="bear"/>
-                </div>
+                </Link>
 
                 <div className="text">
                     <img src={pink} alt="pink" className="pink"/>

@@ -17,29 +17,9 @@ import books from "../../assets/mybook/books.webp"
 export const MyBookSection = () => {
     return (
         <section id="mybook">
-            <div className="images">
-            <img src={shadow} alt="orange shadow" className="shadow"/>
-            <h2>My
-                <b>Book</b>
-            </h2>
-
-            <img src={orFlower} alt="orange flower" className="orange-flower"/>
-            <img src={sarah1} alt="sarah" className="sarah-1"/>
-            <img src={home} alt="home" className="home"/>
-            <img src={startfish} alt="starfish" className="starfish"/>
-            <img src={sarah2} alt="sarah" className="sarah-2"/>
-            <img src={desk} alt="desktop" className="desk"/>
-            <img src={book} alt="book" className="book"/>
-            <img src={yeFlower} alt="yellor flower" className="yellow-flower"/>
-            <img src={pkFlower} alt="pink flower" className="pink-flower"/>
-            <img src={butterfly} alt="butterfly" className="butterfly"/>
-            <img src={typewritter} alt="typewritter" className="typewritter"/>
-
-
-            </div>
             <div className="text">
-                <p>
                 <h3>About My Book</h3>
+                <p>
                 I’m excited to share that my first book will soon be available for purchase in Mexico, Colombia, and Spain. For readers in Spain, it will be available in major bookstores like Corte Inglés, FNAC, Casa del Libro, as well as online on platforms like Amazon and the Editorial Valparaiso’s website.
                 </p>
 
@@ -51,6 +31,24 @@ export const MyBookSection = () => {
                 <p>
                 I’m scared to share this with the world and now a days f*cked up society. I mean, being vulnerable in front of an audience and people who do know me, terrifies me. But this book is my denuncia, my statement, and I want to help other young women who’ve experienced the same pain and never knew where to reach out. If my words can bring comfort or strength to even one person, it will all be worth it.
                 </p>
+            </div>
+            <div className="images">
+                <img src={shadow} alt="orange shadow" className="shadow"/>
+                <h2>My
+                    <b>Book</b>
+                </h2>
+
+                <img src={orFlower} alt="orange flower" className="orange-flower"/>
+                <img src={sarah1} alt="sarah" className="sarah-1"/>
+                <img src={home} alt="home" className="home"/>
+                <img src={startfish} alt="starfish" className="starfish"/>
+                <img src={sarah2} alt="sarah" className="sarah-2"/>
+                <img src={desk} alt="desktop" className="desk"/>
+                <img src={book} alt="book" className="book"/>
+                <img src={yeFlower} alt="yellor flower" className="yellow-flower"/>
+                <img src={pkFlower} alt="pink flower" className="pink-flower"/>
+                <img src={butterfly} alt="butterfly" className="butterfly"/>
+                <img src={typewritter} alt="typewritter" className="typewritter"/>
             </div>
         </section>
     )

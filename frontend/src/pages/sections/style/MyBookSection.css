@@ -32,26 +32,31 @@
 @media screen and (min-width: 900px) {
     #mybook {
         display: flex;
-        flex-direction: row-reverse;
-        padding: 100px 10%;
-        min-height: calc(100dvh + 50px);
+        padding: 10%;
+        min-height: 100dvh;
         gap: 100px;
 
         .text {
-            position: relative;
+            flex-direction: row;
+            flex-wrap: wrap;
             width: 40%;
-            font-size: 1vw;
+            height: max-content;
             color: var(--main-green-02);
 
-            p:last-child {
-                padding-left: 15vw;
-            }
-
             .books {
-                position: absolute;
-                width: 15vw;
+                height: 300px;
                 bottom: 0;
                 left: -30px;
+            }
+
+            p {
+                margin: 0;
+                height: max-content;
+            }
+
+            p:last-child {
+                display: block;
+                flex: 1;
             }
         }
 
@@ -67,7 +72,8 @@
             h2 {
                 position: absolute;
                 display: flex;
-                left: 150px;
+                left: 200px;
+                top: -50px;
                 flex-direction: column;
     
                 b {
@@ -76,13 +82,14 @@
                     padding-left: 100px;
                 }
             }
+
             img {
                 position: absolute;
             }
 
             .sarah-1 {
                 width: 150px;
-                top: 0;
+                top: -10px;
                 left: 0;
             }
 
@@ -96,13 +103,13 @@
                 width: 180px;
                 aspect-ratio: 1;
                 object-fit: cover;
-                left: 20px;
-                bottom: 180px;
+                left: 0px;
+                top: 300px;
             }
 
             .home {
-                top: 250px;
-                left: 210px;
+                top: 100px;
+                left: 170px;
                 width: 100px;
             }
 
@@ -110,47 +117,48 @@
                 width: 250px;
                 aspect-ratio: 1;
                 object-fit: cover;
-                left: 330px;
-                bottom: 80px;
+                left: 280px;
+                top: 240px;
             }
 
             .book {
                 width: 200px;
                 aspect-ratio: 1;
-                bottom: 0;
+                top: 400px;
                 left: 150px;
             }
 
             .yellow-flower {
-                bottom: 0;
+                top: 450px;
             }
 
             .butterfly {
                 width: 100px;
-                top: 470px;
+                top: 450px;
                 left: 200px;
             }
 
             .typewritter {
-                bottom: 0;
-                left: 470px;
+                top: 400px;
+                left: 400px;
             }
 
             .pink-flower {
                 width: 100px;
-                bottom: 40px;
+                top: 500px;
                 left: 320px;
             }
 
             .starfish {
-                top: 200px;
-                left: 50px;
+                top: 100px;
+                left: 100px;
+                transform: scaleX(-1);
             }
 
             .orange-flower {
-                width: 25vw;
-                right: -50px;
-                top: -100px;
+                width: 15vw;
+                right: 50px;
+                top: -50px;
             }
         }
     }

@@ -4,8 +4,10 @@ import { MagazineList } from "../../components/MagazineList"
 import { Button } from "../../components/Button"
 import { useNavigate } from "react-router-dom"
 import "./style/CreativeStudioSection.css"
-import eagel from "../../assets/creativestudio/eagel.webp"
+import flower from "../../assets/creativestudio/flower.png"
 import hand from "../../assets/creativestudio/hand.webp"
+import moon from "../../assets/creativestudio/moon.webp"
+import flowers from "../../assets/creativestudio/flowers.webp"
 
 export const CreativeStudioSection = () => {
 
@@ -22,10 +24,15 @@ export const CreativeStudioSection = () => {
     return (
         <section id="creativestudio">
             <header>
-                <img className="eagel" src={eagel} alt="eagel" />
-                <h2>Creative <b>Studio</b></h2>
-                <span>Expression of thought</span>
-                <img className="hand" src={hand} alt="hand" />
+                <h2>
+                    <span>ROMSIL</span>
+                    Creative<b>Studio</b>
+                    <img src={flower} alt="flower" className="flower"/>
+                </h2>
+                <img src={hand} alt="hand" className="hand"/>
+                <img src={moon} alt="moon" className="moon"/>
+                <h3 className="flowers-label">Expression of thought</h3>
+                <img src={flowers} alt="flowers" className="flowers"/>
             </header>
             <MagazineList magazines={magzines.slice(0,10)} section={"magazines"}/>
             <Button variant={"main"} handleClick={() => navigate(url)}>See More</Button>
