@@ -72,6 +72,10 @@ body {
   background: var(--main-beige-01);
 }
 
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 @media only screen and (min-width: 600px) {
   main {
     margin-top: 70px;

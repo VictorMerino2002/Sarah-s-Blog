@@ -21,7 +21,7 @@
             font-size: 6em;
             font-family: 'Edwardian', cursive;
             font-weight: 400;
-            -webkit-text-stroke: 1px #fff;
+            color: var(--main-white-01);
             text-align: center;
         }
 

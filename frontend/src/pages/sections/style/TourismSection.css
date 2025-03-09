@@ -62,6 +62,12 @@
             p {
                 font-size: 1.3em;
             }
+
+            span {
+                position: absolute;
+                bottom: 300px;
+                left: 250px;
+            }
         }
 
         .caset {
